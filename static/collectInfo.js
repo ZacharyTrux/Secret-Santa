@@ -17,13 +17,18 @@ document.getElementById('itemInfo').addEventListener('submit',(event) => {
         for(let [key, value] of data.entries()) {
             console.log(key+": "+value);
         }
-    }
-
-    if(DEBUG){
         const file = data.get('pic');
         if(file && file.name){
             console.log(file.name);
         }
     }
 
-})
+    fetch('/submit', {method: 'POST', body: formData})
+    .then(repsone => response.json()).then(data => 
+        {console.log('Server response: ', data);})
+    .catch(error => {console.error('Error: ', error)});
+
+
+
+
+});
