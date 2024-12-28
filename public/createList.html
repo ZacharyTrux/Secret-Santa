@@ -1,17 +1,17 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>Secret Santa 2025</title>
-
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa 2025</title>
+</head>
+<body>
     <header>
         <h1>Create a List</h1>
     </header>
     
-    <body>
     <form id="itemInfo">
-    <label for="identity">Who are you? </label>
-        <select name = "identity" id="identity" required>
+        <label for="identity">Who are you? </label>
+        <select name="identity" id="identity" required>
             <option value="None"></option>
             <option value="Zachary">Zachary</option>
             <option value="Madelyn">Madelyn</option>
@@ -21,7 +21,6 @@
             <option value="Brandon">Brandon</option>
         </select><br><br>
 
-    
         <label for="item">Item:</label>
         <input type="text" id="item" name="item" required><br><br>
 
@@ -34,10 +33,9 @@
         <label for="pic">Image:</label>
         <input type="file" id="pic" name="pic" accept="image/*"><br><br>
 
-        <input type="submit" value="Submit">
+        <button id="submit" type="button">Submit</button>
     </form>
 
-
-    <script src="/collectInfo.js"></script>
+    <script type="module" src="/static/collectInfo.js"></script>
 </body> 
 </html>
