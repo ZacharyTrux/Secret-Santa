@@ -1,26 +1,32 @@
 <html>
-<header>
-    <h1>Check Lists!</h1>
-    <nav>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/createList.html">Create List</a></li>
-            <li><a href="/about.html">About</a></li>
-        </ul>
-    </nav>
-</header>
-<body>
-    <p>Who would you like to look at?</p>
-    <select name = "names" id="names">
-        <option value="None"></option>
-        <option value="Zachary">Zachary</option>
-        <option value="Madelyn">Madelyn</option>
-        <option value="Alex">Alex</option>
-        <option value="Tiffany">Tiffany</option>
-        <option value="Cici">Cici</option>
-        <option value="Brandon">Brandon</option>
-    </select>
-    <script type="module"></script>
+    <head>
+        <meta name="viewport" content="width=device-width,">
+        <script type="module" src="/static/displayInfo.js"></script>
+    </head>
+    <header>
+        <h1>Check Lists!</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/createList.html">Create List</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <p>Who would you like to look at?</p>
+        <select name = "names" id="names">
+            <option value="None"></option>
+            <option value="Zachary">Zachary</option>
+            <option value="Madelyn">Madelyn</option>
+            <option value="Alex">Alex</option>
+            <option value="Tiffany">Tiffany</option>
+            <option value="Cici">Cici</option>
+            <option value="Brandon">Brandon</option>
+        </select>
+        <div id="results"></div>
 
-</body>
+    </main>
 </html>
