@@ -1,9 +1,6 @@
 // Set up Firebase SDK
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
 import { getFirestore, collection, getDocs, query} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 // Firebase configuration using environment variables
 const firebaseConfig = {
@@ -16,7 +13,7 @@ const firebaseConfig = {
     measurementId: "G-RKP9H1XHRN"
   };
 
-  
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
