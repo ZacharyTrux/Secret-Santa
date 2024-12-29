@@ -2,17 +2,21 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
-// Firebase configuration
+require('dotenv').config();
+
+// Firebase configuration using environment variables
 const firebaseConfig = {
-    apiKey: "AIzaSyB1X9W4HfCnwdXIuFDXiaWTjB613RyqkUw",
-    authDomain: "secret-santa-2025-6e38f.firebaseapp.com",
-    projectId: "secret-santa-2025-6e38f",
-    storageBucket: "secret-santa-2025-6e38f.firebasestorage.app",
-    messagingSenderId: "724496064011",
-    appId: "1:724496064011:web:223bc1dc86c65c129d310e",
-    measurementId: "G-RKP9H1XHRN"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID,
+    appId: process.env.APP_ID,
+    measurementId: process.env.MEASUREMENT_ID
 };
 
+
+console.log(process.env.API_KEY);
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
